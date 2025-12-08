@@ -1,0 +1,13 @@
+nmap ami kellhet
+
+Usage: nmap [Scan Type(s)] [Options] {target specification}
+TARGET SPECIFICATION:
+  Can pass hostnames, IP addresses, networks, etc.
+  Ex: scanme.nmap.org, microsoft.com/24, 192.168.0.1; 10.0.*.1-24
+
+-sU: UDP Scan
+-sS/sT/sA/sW/sM: TCP SYN/Connect()/ACK/Window/Maimon scans
+-sV: Probe open ports to determine service/version info
+-sC: equivalent to --script=default
+-O: Enable OS detection
+-T<0-5>: Set timing template (higher is faster)
